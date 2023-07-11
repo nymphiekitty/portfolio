@@ -1,5 +1,15 @@
+{
+    box-sizing: border-box !important;
+    padding: 0;
+    margin: 0;
+  }
+
 body {
     font-family: "Space Mono", serif;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 h1 {
@@ -8,4 +18,42 @@ h1 {
 
 .container {
     background: black;
+    align-items: center;
+    text-align: center;
 }
+.marquee {
+    overflow: hidden;
+    box-sizing: border-box;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid rgb(238, 130, 238);
+    height: 40px;
+    width: 455px;
+    border-radius: 22px;
+    box-shadow: 4px 4px 0 #000;
+    overflow: hidden;
+    background: black;
+    white-space: nowrap;
+}
+
+.marquee--inner {
+    display: block;
+    width: 200%;
+    position: absolute;
+    animation: marquee 10s linear infinite;
+    &:hover {
+      animation-play-state: paused;
+      color: white;
+    }
+  }
+
+  @keyframes marquee {
+    0% {
+      left: 0;
+    }
+    100% {
+      left: -100%;
+    }
+  }

@@ -61,27 +61,38 @@ h1 {
 
   nav {
     clear: both;
-    position: relative;
     border: 2px solid rgb(238, 130, 238);
     height: 30px;
-    width: 300px;
+    width: 100px;
     border-radius: 22px;
     box-shadow: 4px 4px 0 #000;
     background: black;
-    white-space: nowrap;
     box-sizing: border-box;
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-right: 10px;
   }
 
   ul {
-    color:rgb(238, 130, 238)
+    color:rgb(238, 130, 238);
+    margin-top: 50px;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    list-style: none;
+    display: flex;
+    flex-direction: row;
   }
 
   ul li {
-    list-style: none;
-    display: inline-block;
+    margin-right: 10px;
+    border-right: 1px solid transparent; /* Add a transparent border */
+  }
+  
+  ul li:last-child {
+    margin-right: 0;
+    border-right: none; /* Remove border for the last button */
   }
 
   ul li a {
